@@ -8,7 +8,7 @@ export async function getAdmin() {
     if(!userId) throw new Error("Unauthorized");
 
     const user = await db.user.findUnique({
-        where: {clarkUserId: userId}
+        where: {clerkUserId: userId}
     })
 
     if(!user || user.role !== "ADMIN"){
