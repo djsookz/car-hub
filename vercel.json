@@ -3,5 +3,14 @@
     "env": {
       "PRISMA_GENERATE_DATAPROXY": "false"
     }
-  }
+  },
+  "routes": [
+    {
+      "src": "/admin/(.*)",
+      "dest": "/admin/index.html",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    }
+  ]
 }
